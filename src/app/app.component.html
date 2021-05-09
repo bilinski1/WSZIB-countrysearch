@@ -1,4 +1,3 @@
-
 <div>
   Wyszukaj Państwo:
   <input
@@ -11,28 +10,54 @@
   <button (click)="getCountry()">Click me</button>
 </div>
 <div>
-  <p><a routerLink="/selectedcountry">{{this.countries.name}}</a></p>
+  <p>
+    <a routerLink="/selectedcountry">{{ this.countries.name }}</a>
+  </p>
 </div>
-<!-- <div class="container">
+<div>
   <table class="">
+    <caption>
+      Country serach results by {{this.country.value}}:
+      {{
+        this.countries.name
+      }}
+    </caption>
     <thead>
-    <tr>
-      <th>ID</th>
-      <th>Firstname</th>
-      <th>Lastname</th>
-      <th>Department</th>
-      <th>Email</th>
-      <th>Country</th>
-    </tr>
-    <p>{{this.countries.name}}</p>
+      <tr>
+        <td>Domain: {{ this.countries.topLevelDomain }}</td>
+      </tr>
     </thead>
+    <tbody>
+      <tr>
+        <td>Capital: {{ this.countries.capital }}</td>
+      </tr>
+      <tr>
+        <td>Region: {{ this.countries.region }}</td>
+      </tr>
+      <tr>
+        <td>Subregion: {{ this.countries.subregion }}</td>
+      </tr>
+      <tr>
+        <td>Population: {{ this.countries.population }}</td>
+      </tr>
+      <tr>
+        <td>Area: {{ this.countries.area }}</td>
+      </tr>
+      <tr>
+        <td>Timezone: {{ this.countries.timezones }}</td>
+      </tr>
+      <tr>
+        <td>Borders: {{ this.countries.borders }}</td>
+      </tr>
+      <tr>
+        <td>Currencies: {{ this.currency.code }}</td>
+      </tr>
+      <tr>
+        <td>Language: {{ this.languages.name}}</td>
+      </tr>
+    </tbody>
   </table>
-  <ul class="userList" *ngIf="countries">
-    <li class="userItem" *ngFor="let country of this.countries">
-        <p class="first"> {{country.name}} </p>
-        <p class="last"></p>
-        <p class="balance"></p>
-   </li>
-</ul>
-</div> -->
-<router-outlet></router-outlet>
+  <p></p>
+  <p>{{ this.countries.region }}</p>
+</div>
+<!-- <router-outlet></router-outlet> -->

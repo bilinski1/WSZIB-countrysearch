@@ -1,1 +1,30 @@
-<p>country works!</p>
+<div class="container">
+  <table class="">
+    <caption>Details about {{this.countries.name}}</caption>
+    <thead>
+        <tr>
+            <th scope="col">Items</th>
+            <th scope="col">Expenditure</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">Country Name</th>
+            <td>{{this.countries.name}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Stationery</th>
+            <td>18,000</td>
+        </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<!-- <ul class="userList" *ngIf="countries">
+    <li class="userItem" *ngFor="let country of this.countries">
+        <p class="first"> {{country.name}} </p>
+        <p class="last"></p>
+        <p class="balance"></p>
+   </li>
+</ul> -->

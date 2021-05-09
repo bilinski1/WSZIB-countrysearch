@@ -26,6 +26,8 @@ export class AppComponent implements OnInit {
     value: '',
   };
 
+  currency: any;
+  languages: any;
   countries: any;
   data: any;
 
@@ -37,18 +39,30 @@ export class AppComponent implements OnInit {
     this.http.getCurrency(this.country.value).subscribe((response) => {
       this.countries = response[0];
       console.log(this.countries);
+      this.languages = this.countries.languages[0];
+      console.log(this.languages.name);
+      this.currency = this.countries.currencies[0];
+      console.log(this.currency.code);
       this.data = response as string[];
     });
 
     this.http.getCountries(this.country.value).subscribe((response) => {
       this.countries = response[0];
       console.log(this.countries);
+      this.languages = this.countries.languages[0];
+      console.log(this.languages.name);
+      this.currency = this.countries.currencies[0];
+      console.log(this.currency.code);
       this.data = response as string[];
     });
-    
+
     this.http.getCapital(this.country.value).subscribe((response) => {
       this.countries = response[0];
       console.log(this.countries);
+      this.languages = this.countries.languages[0];
+      console.log(this.languages.name);
+      this.currency = this.countries.currencies[0];
+      console.log(this.currency.code);
       this.data = response as string[];
     });
   }
