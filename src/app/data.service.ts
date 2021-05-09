@@ -44,7 +44,7 @@ getCurrency(inputvalue: string):any {
       console.log(this.data);
       return response;
     }
-  ); */
+  ); d*/
 }
 }
 
