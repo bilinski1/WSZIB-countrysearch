@@ -1,5 +1,6 @@
-<div>
-  Wyszukaj Państwo:
+<div class="uk-container-expand uk-height-viewport uk-flex-middle uk-flex uk-flex-center uk-flex-column">
+  <div class="uk-container-expand uk-flex-middle uk-flex uk-flex-center uk-flex-row">
+  <div style="padding: 20px;">Search Country:</div>
   <input
     type="text"
     id="username"
@@ -7,20 +8,18 @@
     [(ngModel)]="country.value"
     name="name"
   />
-  <button (click)="getCountry()">Click me</button>
+  <button (click)="getCountry()">Search</button>
 </div>
-<div>
+<div style="text-align: center;">
   <p>
+    Country serach results by {{this.country.value}}:
+ <br>
     <a routerLink="/selectedcountry">{{ this.countries.name }}</a>
   </p>
 </div>
-<div>
+<div class="uk-container-expand uk-flex-middle uk-flex uk-flex-center" style="margin: 30px;">
   <table class="">
     <caption>
-      Country serach results by {{this.country.value}}:
-      {{
-        this.countries.name
-      }}
     </caption>
     <thead>
       <tr>
@@ -57,5 +56,6 @@
       </tr>
     </tbody>
   </table>
+</div>
 </div>
 <!-- <router-outlet></router-outlet> -->
