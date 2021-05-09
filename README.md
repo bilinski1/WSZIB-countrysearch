@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # CountrySearch
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.10.
@@ -25,3 +26,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+=======
+# WSZIB-countrysearch
+Country Search Angular
+>>>>>>> 894a7f7217ef6c48d76836bf6e4bd84ad641588d
