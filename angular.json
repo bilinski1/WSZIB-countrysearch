@@ -28,9 +28,13 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/uikit/dist/css/uikit.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/uikit/dist/js/uikit.js",
+              "./node_modules/uikit/dist/js/uikit-icons.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -91,9 +95,13 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/uikit/dist/css/uikit.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/uikit/dist/js/uikit.js",
+              "./node_modules/uikit/dist/js/uikit-icons.js"
+            ]
           }
         },
         "lint": {
