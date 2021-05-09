@@ -10,8 +10,11 @@
   />
   <button (click)="getCountry()">Click me</button>
 </div>
-<div class="container">
-  <table class="table table-bordered table-striped">
+<div>
+  <p><a routerLink="/selectedcountry">{{this.countries.name}}</a></p>
+</div>
+<!-- <div class="container">
+  <table class="">
     <thead>
     <tr>
       <th>ID</th>
@@ -23,13 +26,6 @@
     </tr>
     <p>{{this.countries.name}}</p>
     </thead>
-    <tbody>
-<!-- <tr *ngFor="let e of countries">
-    <td><span>{{e.name}}</span></td>  -->
-<!--   <td><span>{{country.name}}</span></td>
-      <td><span>{{country.name}}</span></td>  -->
-  <!--   </tr>  -->
-    </tbody>
   </table>
   <ul class="userList" *ngIf="countries">
     <li class="userItem" *ngFor="let country of this.countries">
@@ -38,5 +34,5 @@
         <p class="balance"></p>
    </li>
 </ul>
-</div>
+</div> -->
 <router-outlet></router-outlet>

@@ -3,7 +3,6 @@ import { Dataservice } from './data.service';
 import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -20,7 +19,6 @@ import { Observable } from 'rxjs';
     flag: string
 }
  */
-
 export class AppComponent implements OnInit {
   constructor(private http: Dataservice) {}
 
@@ -28,41 +26,30 @@ export class AppComponent implements OnInit {
     value: '',
   };
 
- countries: any;
- data: any;
+  countries: any;
+  data: any;
 
+  inputvalue: string = this.country.value;
 
-inputvalue: string = this.country.value;
-
-
-  ngOnInit() {
-;
-  }
-
+  ngOnInit() {}
 
   getCountry() {
-  //  this.http.getCountries(this.country.value);
-    this.http.getCurrency(this.country.value).subscribe(response => {
+    this.http.getCurrency(this.country.value).subscribe((response) => {
       this.countries = response[0];
       console.log(this.countries);
-      this.data = response as string [];
-    }
-  );
+      this.data = response as string[];
+    });
 
-    this.http.getCountries(this.country.value).subscribe(response => {
+    this.http.getCountries(this.country.value).subscribe((response) => {
       this.countries = response[0];
       console.log(this.countries);
-      this.data = response as string [];
-    }
-  );
-/*     this._http.getApiData().subscribe(data => {
-      this.users = data['results'][0];
-    }); */
+      this.data = response as string[];
+    });
+    
+    this.http.getCapital(this.country.value).subscribe((response) => {
+      this.countries = response[0];
+      console.log(this.countries);
+      this.data = response as string[];
+    });
   }
-
-  
-
 }
-
-
-//     this.http.getCountries(this.inputvalue).subscribe(countries => this.countries = countries)

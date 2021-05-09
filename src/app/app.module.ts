@@ -5,6 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CountryComponent } from './country/country.component';
+import { Routes, RouterModule } from '@angular/router';
+
+const appRoutes: Routes = [
+ // { path: '', component: AppComponent},
+  { path: 'selectedcountry', component: CountryComponent}
+];
+
 
 @NgModule({
   declarations: [
@@ -15,7 +22,8 @@ import { CountryComponent } from './country/country.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(appRoutes),
   ],
   providers: [],
   bootstrap: [AppComponent]

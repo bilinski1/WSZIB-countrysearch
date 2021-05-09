@@ -24,8 +24,8 @@ getCurrency(inputvalue: string):any {
   return this.http.get<any>('https://restcountries.eu/rest/v2/currency/' + inputvalue)
 }
 
-getCurrency(inputvalue: string):any {
-  return this.http.get<any>('https://restcountries.eu/rest/v2/currency/' + inputvalue)
+getCapital(inputvalue: string):any {
+  return this.http.get<any>('https://restcountries.eu/rest/v2/capital/' + inputvalue)
 }
 }
 
